@@ -42,6 +42,13 @@ public class StudentService {
 		SqlSession sqlSession = MybatisSqlSessionFactory.openSession();
 		StudentDao studentDao = sqlSession.getMapper(StudentDao.class);
 		int res = studentDao.updateStudent(student);
+		sqlSession.commit(); //이게 없으면 값이 안드감 왜 그런지는 모르겠음
+		return res;
+	}
+	public int deleteStudent(int studNo){
+		SqlSession sqlSession = MybatisSqlSessionFactory.openSession();
+		StudentDao studentDao = sqlSession.getMapper(StudentDao.class);
+		int res = studentDao.deleteStudent(studNo);
 		sqlSession.commit();
 		return res;
 	}
