@@ -27,13 +27,16 @@ public class StudentDaoTest {
 		studentService = null;
 	}
 
-	@Test
-	public void testselectStudentByAll(){
+	/*@Test
+	public void testinsertStudent(){
 		Student std = new Student(4, "조시은", "jsw@test.co.kr",new Date());
-		
 		int res  = studentService.insertStudent(std);
-		
 		Assert.assertEquals(1, res);
+	}*/
+	
+	@Test
+	public void testselectStudentByNO(){
+		Student student =  studentService.selectStudentByNo(4);
+		Assert.assertNotNull(student);
 	}
-
 }
