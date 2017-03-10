@@ -39,12 +39,12 @@ public class StudentDaoTest {
 		Student student =  studentService.selectStudentByNo(4);
 		Assert.assertNotNull(student);
 	}*/
-	@Test
+	/*@Test
 	public void testupdateStudent(){
 		Student std = new Student(3, "설동훈", "sdh@test.co.kr", new Date(), new PhoneNumber("010-2618-4317"));
 		int res = studentService.updateStudent(std);
 		Assert.assertEquals(1, res);
-	}
+	}*/
 	/*@Test
 	public void testdeleteStudent(){
 		int res = studentService.deleteStudent(3);
@@ -52,7 +52,7 @@ public class StudentDaoTest {
 	}*/
 	@Test
 	public void testinsertStudentWithPhone(){
-		Student student = new Student(3,"이교민","igm@test.co.kr",new Date(), new PhoneNumber("010-1234-1234"));
+		Student student = new Student(7,"이교민","igm@test.co.kr",new Date(), new PhoneNumber("010-1234-1234"));
 		int res = studentService.insertStudentWithPhone(student);
 		Assert.assertEquals(1, res);
 	}
